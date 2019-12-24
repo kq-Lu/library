@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Api(description = "图书管理系统")
 public class zpController {
-    @PostMapping("/add")
+    @PostMapping("/add2")
     @ApiOperation(value="添加图书信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name="name",value="书名",paramType = "query",dataType = "String"),
@@ -21,10 +21,10 @@ public class zpController {
             @ApiImplicitParam(name="name",value="作者名",paramType = "query",dataType = "String")
 
     })
-    public Message add(String name,int bno,String authorname){
+    public Message add2(String name,int bno,String authorname){
         return MessageUtil.success("添加图书信息成功");
     }
-    @GetMapping ("/delete")
+    @GetMapping ("/delete2")
     @ApiOperation(value="删除图书信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name="name",value="书名",paramType = "query",dataType = "String"),
@@ -32,10 +32,10 @@ public class zpController {
             @ApiImplicitParam(name="name",value="作者名",paramType = "query",dataType = "String")
 
     })
-    public Message delete(String name,int bno,String authorname){
+    public Message delete2(String name,int bno,String authorname){
         return MessageUtil.success("删除图书信息成功");
     }
-    @PostMapping ("/update")
+    @PostMapping ("/update2")
     @ApiOperation(value="修改图书信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name="name",value="书名",paramType = "query",dataType = "String"),
@@ -43,10 +43,10 @@ public class zpController {
             @ApiImplicitParam(name="name",value="作者名",paramType = "query",dataType = "String")
 
     })
-    public Message update(String name,int bno,String authorname){
+    public Message update2(String name,int bno,String authorname){
         return MessageUtil.success("修改图书信息成功");
     }
-    @GetMapping("/search")
+    @GetMapping("/search2")
     @ApiOperation(value="查询图书信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name="name",value="书名",paramType = "query",dataType = "String"),
@@ -54,7 +54,7 @@ public class zpController {
             @ApiImplicitParam(name="name",value="作者名",paramType = "query",dataType = "String")
 
     })
-    public Message search(String name,int bno,String authorname){
+    public Message search2(String name,int bno,String authorname){
         return MessageUtil.success("查询图书信息成功");
     }
 }
