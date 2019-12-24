@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,13 +26,13 @@ public class GaoYJ {
         return MessageUtil.success("添加图书成功");
 
     }
-    @PostMapping("/delete")
+    @GetMapping("/delete")
     @ApiOperation(value = "删除图书")
     @ApiImplicitParam(name="bookId",value="书号",paramType = "query",dataType = "int",required = true)
     public Message delet(int bookId){
         return MessageUtil.success("删除图书成功");
     }
-    @PostMapping("/search")
+    @GetMapping("/search")
     @ApiImplicitParam(name="bookId",value="书号",paramType = "query",dataType = "int",required = true)
     public  Message serach(int bookId){
         return MessageUtil.success("查询图书成功");
