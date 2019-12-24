@@ -29,12 +29,12 @@ public class GaoYJ {
     @GetMapping("/delete")
     @ApiOperation(value = "删除图书")
     @ApiImplicitParam(name="bookId",value="书号",paramType = "query",dataType = "int",required = true)
-    public Message delet(int bookId){
+    public Message delete(int bookId){
         return MessageUtil.success("删除图书成功");
     }
     @GetMapping("/search")
     @ApiImplicitParam(name="bookId",value="书号",paramType = "query",dataType = "int",required = true)
-    public  Message serach(int bookId){
+    public  Message search(int bookId){
         return MessageUtil.success("查询图书成功");
     }
     @PostMapping("/change")
