@@ -4,9 +4,11 @@ import com.briup.library.util.Message;
 import com.briup.library.util.MessageUtil;
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/FengJB")
 @Api(description = "图书管理器")
 public class FengJBController {
     @GetMapping("/login4")
