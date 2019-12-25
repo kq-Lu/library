@@ -106,6 +106,6 @@ public class FengJBController {
     })
     public Message PayFine4( int Id,String username ){
         System.out.println("需要缴纳**元的罚款金额");
-        return MessageUtil.success("添加还书记录");
+        return MessageUtil.success("缴纳罚款成功");
     }
 }
